@@ -129,6 +129,30 @@ put this command in the terminal and hit enter
 SET_TMC_FIELD FIELD=SGTHRS STEPPER=stepper_x VALUE=255
 ```
 
+You will need to tell your printer to home x each time you issue the below commands..
+
+Subtract 50 until the toolhead moves all the way to the right...
+
+```bash
+SET_TMC_FILED FIELD=SGTHRS STEPPER=stepper_x VALUE=205
+```
+
+Keep adjusting the value until your toolhead makes it all the way RIGHT.
+
+Then we need to fine-tune with by going + or - by 5 until things go all the way but do not CRASH.
+
+Make sure you update your printer.cfg 
+
+This is the line we want to mod: **driver_SGTHRS: 160**
+
+save config. 
+
+Do the same process above for Y
+
+
+
+
+
 
 
 
